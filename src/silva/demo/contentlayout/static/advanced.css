@@ -10,3 +10,9 @@
   margin: 2%;
   float: right;
 }
+
+
+.horizontal-blocks > div {
+   width: 300px;
+   float: left;
+}
