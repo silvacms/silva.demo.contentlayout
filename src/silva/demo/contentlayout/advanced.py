@@ -44,7 +44,7 @@ class AdvancedTemplate(Template):
         need(IAdvancedResources)
 
     def top_menu_items(self):
-        for content in self.root:
+        for content in self.root.get_ordered_publishables():
             if not IPublication.providedBy(content):
                 continue
             yield {'title': content.get_title_or_id(),
