@@ -5,16 +5,16 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 from silva.core import conf as silvaconf
 from silva.core.contentlayout import Template, Slot
-from silva.core.interfaces import IPublication
+from silva.core.interfaces import IPublication, IImage
 from silva.core.layout.interfaces import ICustomizableTag
 from silva.core.layout.porto import porto
 from silva.translations import translate as _
 from silvatheme.standardissue.standardissue import IStandardIssue
 from silva.fanstatic import need
+from silva.core.contentlayout.slots import restrictions
 
 
 grok.templatedir('templates')
-
 
 
 class IAdvancedTemplate(ICustomizableTag):
@@ -26,7 +26,6 @@ class IAdvancedResources(IDefaultBrowserLayer):
     silvaconf.resource('advanced.css')
 
 
-
 class AdvancedTemplate(Template):
     grok.order(5)
     grok.context(IAdvancedTemplate)
@@ -34,9 +33,14 @@ class AdvancedTemplate(Template):
     label = _(u"Advanced template (StandardIssue)")
     description = _(u'A template that use larger portion from a layout')
 
-    slots = {'one': Slot(),
-             'two': Slot(),
-             'navigation': Slot(),
+    slots = {'one': Slot(restrictions=[
+                restrictions.CodeSourceName('cs_citation')]),
+             'two': Slot(restrictions=[
+                restrictions.CodeSourceName('cs_toc'),
+                restrictions.BlockAll()]),
+             'navigation': Slot(restrictions=[
+                restrictions.Content(IImage),
+                restrictions.BlockAll()]),
              'footer': Slot(css_class="horizontal-blocks")}
 
     def update(self):
