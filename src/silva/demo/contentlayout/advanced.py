@@ -3,16 +3,16 @@ from five import grok
 from zope.traversing.browser import absoluteURL
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
+from silva.app.page.interfaces import IPage
 from silva.core import conf as silvaconf
 from silva.core.contentlayout import Template, Slot
+from silva.core.contentlayout.slots import restrictions
 from silva.core.interfaces import IPublication, IImage
 from silva.core.layout.interfaces import ICustomizableTag
 from silva.core.layout.porto import porto
+from silva.fanstatic import need
 from silva.translations import translate as _
 from silvatheme.standardissue.standardissue import IStandardIssue
-from silva.fanstatic import need
-from silva.core.contentlayout.slots import restrictions
-
 
 grok.templatedir('templates')
 
@@ -20,7 +20,7 @@ grok.templatedir('templates')
 class IAdvancedTemplate(ICustomizableTag):
     """Advanced layout template for Page
     """
-
+    silvaconf.only_for(IPage)
 
 class IAdvancedResources(IDefaultBrowserLayer):
     silvaconf.resource('advanced.css')
