@@ -33,15 +33,19 @@ class AdvancedTemplate(Template):
     label = _(u"Advanced template (StandardIssue)")
     description = _(u'A template that use larger portion from a layout')
 
-    slots = {'one': Slot(restrictions=[
+    slots = {
+        'one': Slot(
+            restrictions=[
                 restrictions.CodeSourceName('cs_citation')]),
-             'two': Slot(restrictions=[
+        'two': Slot(
+            restrictions=[
                 restrictions.CodeSourceName('cs_toc'),
                 restrictions.BlockAll()]),
-             'navigation': Slot(restrictions=[
+        'navigation': Slot(
+            restrictions=[
                 restrictions.Content(IImage),
                 restrictions.BlockAll()]),
-             'footer': Slot(css_class="horizontal-blocks")}
+        'footer': Slot(css_class="horizontal-blocks")}
 
     def update(self):
         self.root = self.content.get_publication()
