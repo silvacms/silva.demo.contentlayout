@@ -22,6 +22,7 @@ class IAdvancedTemplate(ICustomizableTag):
     """
     silvaconf.only_for(IPage)
 
+
 class IAdvancedResources(IDefaultBrowserLayer):
     silvaconf.resource('advanced.css')
 
