@@ -14,6 +14,7 @@ grok.templatedir('templates')
 class OneColumn(Template):
     silvaconf.icon("one_column.png")
     grok.order(10)
+    grok.name('demo.one_column')
 
     label = _(u"One Column (standard)")
     description = _(u"A simple one column layout")
@@ -27,6 +28,7 @@ class ITwoColumnsResources(IDefaultBrowserLayer):
 class TwoColumns(Template):
     silvaconf.icon("two_columns.png")
     grok.order(20)
+    grok.name('demo.two_column')
 
     label = _(u"Two Columns (standard)")
     description = _(u"A simple two columns layout")
