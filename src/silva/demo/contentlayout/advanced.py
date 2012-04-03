@@ -39,10 +39,10 @@ class AdvancedDesign(Design):
     slots = {
         'one': Slot(
             restrictions=[
-                restrictions.CodeSourceName('cs_citation')]),
+                restrictions.CodeSourceName(allowed=['cs_citation'])]),
         'two': Slot(
             restrictions=[
-                restrictions.CodeSourceName('cs_toc'),
+                restrictions.CodeSourceName(disallowed=['cs_toc']),
                 restrictions.BlockAll()]),
         'navigation': Slot(
             restrictions=[
