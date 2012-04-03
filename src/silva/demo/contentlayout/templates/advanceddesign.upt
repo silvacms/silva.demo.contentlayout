@@ -2,12 +2,12 @@
   <div id="header">
     <div id="logo">
       <h1><a href="#"
-             tal:attributes="href path:template/root/@@absolute_url"
-             tal:content="template.root.get_title_or_id()">Silva</a></h1>
+             tal:attributes="href path:design/root/@@absolute_url"
+             tal:content="design.root.get_title_or_id()">Silva</a></h1>
     </div>
     <div id="menu">
       <ul>
-        <li tal:repeat="item template.top_menu_items()"
+        <li tal:repeat="item design.top_menu_items()"
             tal:attributes="class item.css">
           <a tal:attributes="href item.url"
              tal:content="item.title">

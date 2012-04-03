@@ -5,7 +5,7 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 from silva.app.page.interfaces import IPage
 from silva.core import conf as silvaconf
-from silva.core.contentlayout import Template, Slot
+from silva.core.contentlayout import Design, Slot
 from silva.core.contentlayout.slots import restrictions
 from silva.core.interfaces import IPublication, IImage
 from silva.core.layout.interfaces import ICustomizableTag
@@ -27,10 +27,10 @@ class IAdvancedResources(IDefaultBrowserLayer):
     silvaconf.resource('advanced.css')
 
 
-class AdvancedTemplate(Template):
+class AdvancedDesign(Design):
     grok.order(5)
     grok.name('demo.advanced_tempate')
-    grok.title(_(u"Advanced template (StandardIssue)"))
+    grok.title(_(u"Advanced design (StandardIssue)"))
 
     description = _(u'A template that use larger portion from a layout')
 
