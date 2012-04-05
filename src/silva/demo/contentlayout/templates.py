@@ -17,7 +17,7 @@ class OneColumn(Design):
     grok.name('demo.one_column')
     grok.title(_(u"One Column (standard)"))
 
-    description = _(u"A simple one column layout")
+    description = _(u"A simple one column design")
     slots = {'main': Slot()}
 
 
@@ -31,7 +31,7 @@ class TwoColumns(Design):
     grok.name('demo.two_column')
     grok.title(_(u"Two Columns (standard)"))
 
-    description = _(u"A simple two columns layout")
+    description = _(u"A simple two columns design")
     slots = {'one': Slot(),
              'two': Slot()}
 

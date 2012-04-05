@@ -29,10 +29,10 @@ class IAdvancedResources(IDefaultBrowserLayer):
 
 class AdvancedDesign(Design):
     grok.order(5)
-    grok.name('demo.advanced_tempate')
+    grok.name('demo.advanced_template')
     grok.title(_(u"Advanced design (StandardIssue)"))
 
-    description = _(u'A template that use larger portion from a layout')
+    description = _(u'A design that uses a section from a layout')
 
     markers = [IAdvancedTemplate]
 
