@@ -45,10 +45,11 @@ class AdvancedDesign(Design):
                 restrictions.CodeSourceName(disallowed=['cs_toc']),
                 restrictions.BlockAll()]),
         'navigation': Slot(
+            tag='nav',
             restrictions=[
                 restrictions.Content(IImage),
                 restrictions.BlockAll()]),
-        'footer': Slot(css_class="horizontal-blocks")}
+        'footer': Slot(tag='footer', css_class="horizontal-blocks")}
 
     def update(self):
         self.root = self.content.get_publication()
