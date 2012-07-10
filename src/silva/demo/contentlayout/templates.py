@@ -12,7 +12,7 @@ grok.templatedir('templates')
 
 
 class OneColumn(Design):
-    silvaconf.icon("one_column.png")
+    silvaconf.icon("one_column.png", models="one_column_models.png")
     grok.order(10)
     grok.name('demo.one_column')
     grok.title(_(u"One Column (standard)"))

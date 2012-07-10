@@ -39,15 +39,16 @@ class AdvancedDesign(Design):
     slots = {
         'one': Slot(
             restrictions=[
-                restrictions.CodeSourceName(allowed=['cs_citation'])]),
+                restrictions.CodeSourceName(allowed=['cs_toc'])]),
         'two': Slot(
             restrictions=[
                 restrictions.CodeSourceName(disallowed=['cs_toc']),
+                restrictions.Content(IImage),
                 restrictions.BlockAll()]),
         'navigation': Slot(
             tag='nav',
             restrictions=[
-                restrictions.Content(IImage),
+                restrictions.CodeSourceName(allowed=['cs_toc']),
                 restrictions.BlockAll()]),
         'footer': Slot(tag='footer', css_class="horizontal-blocks")}
 
