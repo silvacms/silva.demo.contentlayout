@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2012  Infrae. All rights reserved.
+# See also LICENSE.txt
 from setuptools import setup, find_packages
 import os
 
-version = '2.0dev'
+version = '3.0c1'
 
 tests_require = [
     'Products.Silva [test]',
@@ -21,16 +24,26 @@ setup(name='silva.demo.contentlayout',
       keywords='',
       author='Infrae',
       author_email='info@infrae.com',
-      url='',
-      license='GPL',
+      url='http://infrae.com/products/siva',
+      license='BSD',
       package_dir={'': 'src'},
       packages=find_packages('src'),
       namespace_packages=['silva', 'silva.demo'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
+          'five.grok',
           'setuptools',
+          'silva.app.page',
+          'silva.core.conf',
           'silva.core.contentlayout',
+          'silva.core.interfaces',
+          'silva.core.layout',
+          'silva.fanstatic',
+          'silva.translations',
+          'silvatheme.standardissue',
+          'zope.publisher',
+          'zope.traversing',
       ],
       tests_require = tests_require,
       extras_require = {'test': tests_require},
