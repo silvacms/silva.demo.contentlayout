@@ -12,7 +12,7 @@ tests_require = [
 
 setup(name='silva.demo.contentlayout',
       version=version,
-      description="Silva Content Layout Demo templates",
+      description="Silva Content Layout demonstration templates",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -24,7 +24,7 @@ setup(name='silva.demo.contentlayout',
       keywords='',
       author='Infrae',
       author_email='info@infrae.com',
-      url='http://infrae.com/products/siva',
+      url='https://github.com/silvacms/silva.demo.contentlayout',
       license='BSD',
       package_dir={'': 'src'},
       packages=find_packages('src'),

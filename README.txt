@@ -16,10 +16,10 @@ Thanks to `UCL`_ for sponsoring this extension.
 Code repository
 ===============
 
-You can find the code of this extension in Mercurial:
-https://hg.infrae.com/silva.demo.contentlayout/.
+You can find the code of this extension in Git:
+https://github.com/silvacms/silva.demo.contentlayout
 
 .. _UCL: http://www.ucl.ac.uk/
-.. _extension developer documentation: http://docs.infrae.com/silva/trunk/addons/contentlayout/index.html
+.. _extension developer documentation: http://docs.silvacms.org/trunk/addons/contentlayout/index.html
 
 
